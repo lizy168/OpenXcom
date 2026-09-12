@@ -101,7 +101,7 @@ jobs:
           $MAYBE_SUDO cmake --build ${{ matrix.build-dir || 'build' }} -v --config ${{ matrix.build-config || 'Debug' }} --target install
 
       - name: Archive artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
             name: openxcom_${{ matrix.name }}_${{ matrix.compiler }}-${{ env.describe }}
             path: |
